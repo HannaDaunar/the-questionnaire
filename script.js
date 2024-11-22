@@ -4,10 +4,10 @@ form.addEventListener("submit", (event) => {
     // https://learn.javascript.ru/default-browser-action
     event.preventDefault();
     // Здесь твой код
-    const name = document.querySelector("#name").value;
-    const secondName = document.querySelector("#secondName").value;
-    const email = document.querySelector("#email").value;
-    const phone = document.querySelector("#phone").value;
+    const name = document.querySelector("#name");
+    const secondName = document.querySelector("#secondName");
+    const email = document.querySelector("#email");
+    const phone = document.querySelector("#phone");
     const checkbox = document.querySelector("#agree");
 
     function controlCheckbox() {
@@ -40,10 +40,10 @@ form.addEventListener("submit", (event) => {
                     'Authorization': 'Bearer: HannaDaunar'
                 },
                 body: JSON.stringify({
-                    "name": name,
-                    "secondName": secondName,
-                    "phone": phone,
-                    "email": email,
+                    "name": name.value,
+                    "secondName": secondName.value,
+                    "phone": phone.value,
+                    "email": email.value,
                     "agree": controlCheckbox()
                 })
             })
