@@ -51,14 +51,13 @@ form.addEventListener("submit", (event) => {
                 return result.json();
             })
             .then((data) => {
-                console.log(data);
-                notificationText.textContent = ":) Вы успешно зарегистрированы!"
+                notificationText.textContent = Object.values(data);
                 form.reset();
                 showNotification();
 
             })
             .catch((error) => {
-                notificationText.textContent = ":( Произошла ошибка, попробуйте еще раз"
+                notificationText.textContent = Object.values(error);
                 showNotification();
             })
     })
