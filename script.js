@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const name = document.querySelector("#name");
+const firstName = document.querySelector("#name");
 const secondName = document.querySelector("#secondName");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
                 'Authorization': 'Bearer: HannaDaunar'
             },
             body: JSON.stringify({
-                "name": name.value,
+                "name": firstName.value,
                 "secondName": secondName.value,
                 "phone": phone.value,
                 "email": email.value,
