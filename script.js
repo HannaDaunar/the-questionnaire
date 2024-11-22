@@ -31,7 +31,7 @@ form.addEventListener("submit", (event) => {
     }
 
 
-    button.addEventListener('click', function() {
+    form.addEventListener('submit', function() {
         fetch(`https://polinashneider.space/user`, {
                 method: 'POST',
                 headers: {
@@ -60,6 +60,7 @@ form.addEventListener("submit", (event) => {
                 notificationText.textContent = Object.values(error);
                 showNotification();
             })
+
     })
 
     clear.addEventListener('click', function() {
