@@ -6,11 +6,7 @@ const phone = document.querySelector("#phone");
 const checkbox = document.querySelector("#agree");
 
 function controlCheckbox() {
-    if (checkbox.checked) {
-        return true;
-    } else {
-        return false;
-    }
+    return checkbox.checked
 }
 
 const notification = document.querySelector(".notification-wrapper");
